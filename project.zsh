@@ -1,3 +1,14 @@
+#!/usr/bin/env zsh
+
+function new_project(){
+		PROJECT_NAME=$1
+		PROJECT_ROOT="$HOME/Projects/$PROJECT_NAME/"
+
+		mkdir -p $PROJECT_ROOT/{design,notes,platform,src,staging}
+		touch $PROJECT_ROOT/.projectile
+		mkdir $PROJECT_ROOT/platform/logs/
+}
+
 function start_project(){
 		SESSION_NAME=$1
 		PROJECT_ROOT="$HOME/Projects/$SESSION_NAME/"
