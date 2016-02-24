@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+LOG_PATH="$HOME/History/logs/recoll"
+LOG_FILE="$LOG_PATH/recoll-$(date +%s).log"
+INDEX_PATH='/media/Erudite/Indexes'
+
+library_list=(
+		'darkarts'
+		'fiction'
+		'imported'
+		'personal_development'
+		'reference'
+		'sort'
+)
+
+for i in "${library_list[@]}"
+do
+		export RECOLL_CONFDIR="$INDEX_PATH/$i"
+		echo "Processing ${(C)i} Library"
+		echo $RECOLL_CONFDIR >> $LOG_FILE
+		recollindex >>&| $LOG_FILE
+done
