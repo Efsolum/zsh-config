@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+export ARIA_KEY=$(date +%s) ;\
+echo $ARIA_KEY > ~/temp/access.key ;\
+aria2c --rpc-secret=$ARIA_KEY
