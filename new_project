@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+PROJECT_NAME=$1
+PROJECT_ROOT="$HOME/Projects/$PROJECT_NAME/"
+
+mkdir -p $PROJECT_ROOT/{design,notes,platform,src,staging}
+touch $PROJECT_ROOT/.projectile
+mkdir $PROJECT_ROOT/platform/logs/
