@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+# recoll <library> <x display>
+
+[[ -n $2 ]] && export DISPLAY=:$2
+export RECOLL_CONFDIR=/media/Erudite/Indexes/$1
+[[ -d $RECOLL_CONFDIR ]] || mkdir -p $RECOLL_CONFDIR
+recoll &> /dev/null &
