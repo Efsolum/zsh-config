@@ -8,4 +8,5 @@ autoload -U \
 				 emacs_shutdown_servers \
 				 start_download_server \
 				 start_ui_server \
-				 index_libraries
+				 index_libraries \
+				 recoll
