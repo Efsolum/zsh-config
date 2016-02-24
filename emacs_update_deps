@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+cask upgrade-cask
+cd ~/.emacs.d/
+cask update
+cd ~/
