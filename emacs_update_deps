@@ -2,5 +2,6 @@
 
 cask upgrade-cask
 cd ~/.emacs.d/
+cask install
 cask update
 cd ~/
