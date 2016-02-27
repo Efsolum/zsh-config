@@ -1,7 +1,14 @@
 #!/usr/bin/env zsh
 
+print "Updating Cask"
 cask upgrade-cask
+
 cd ~/.emacs.d/
+
+print "Installing new Emacs packages."
 cask install
+
+print "Updating exsiting Emacs packages."
 cask update
+
 cd ~/
