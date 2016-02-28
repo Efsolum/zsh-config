@@ -9,4 +9,5 @@ autoload -U \
 				 start_download_server \
 				 start_ui_server \
 				 index_libraries \
-				 recoll
+				 recoll \
+				 calibre_import
