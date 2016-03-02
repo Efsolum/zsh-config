@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
-function_dir=$HOME/.zfunctions/
+# function_dir=$HOME/.zfunctions/
+function_dir=$(dirname $_)
 fpath=($function_dir $fpath)
 
 for func in $(ls $function_dir) ;
