@@ -1,4 +1,4 @@
-script_dir=$HOME/$(dirname $_)
+script_dir=$(dirname $_)
 
 # initialize the prompt system promptinit
 autoload -U promptinit
