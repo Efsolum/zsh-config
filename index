@@ -1,13 +1,10 @@
 #!/usr/bin/env zsh
 
-fpath=(~/.zfunctions $fpath)
-autoload -U \
-				 new_project \
-				 start_project \
-				 emacs_update_deps \
-				 emacs_shutdown_servers \
-				 start_download_server \
-				 start_ui_server \
-				 index_libraries \
-				 recoll \
-				 calibre_import
+function_dir=$HOME/.zfunctions/
+fpath=($function_dir $fpath)
+
+for func in $(ls $function_dir) ;
+do
+		[[ $func == 'index' ]] && continue
+    autoload -U $func
+done
