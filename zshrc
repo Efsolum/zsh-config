@@ -1,3 +1,4 @@
+# obtain agrument of last command
 script_dir=$(dirname $_)
 
 # initialize the prompt system promptinit

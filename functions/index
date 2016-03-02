@@ -1,6 +1,5 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
-# function_dir=$HOME/.zfunctions/
 function_dir=$(dirname $_)
 fpath=($function_dir $fpath)
 
