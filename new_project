@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+# Create a new project directory with the specified layout
 
 PROJECT_NAME=$1
 PROJECT_ROOT="$HOME/Projects/$PROJECT_NAME/"

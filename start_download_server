@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+# Start the aria2 download manager using the default config
 
 export ARIA_KEY=$(date +%s) ;\
 echo $ARIA_KEY > ~/temp/access.key ;\
