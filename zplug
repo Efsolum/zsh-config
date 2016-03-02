@@ -1,0 +1,7 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+
+[[ -d $HOME/.zplug ]] || \
+		{print 'Installing Zplug'
+		 git clone https://github.com/b4b4r07/zplug $HOME/.zplug}
+
+source $HOME/.zplug/zplug

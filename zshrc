@@ -34,6 +34,8 @@ export HISTFILE=~/.zhistory
 		source $script_dir/functions/index
 [[ -f $script_dir/tools ]] && \
 		source $script_dir/tools
+[[ -f $script_dir/zplug ]] && \
+		source $script_dir/zplug
 
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path
