@@ -30,30 +30,10 @@ export SAVEHIST=$HISTSIZE
 export HISTFILE=~/.zhistory
 
 # print "Value: $script_dir"
-source $script_dir/functions/index
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    export PATH="$HOME/bin:$PATH"
-fi
-
-export EDITOR="emacsclient -s projects -c"
-export VISUAL=$EDITOR
-
-#emacs cask
-export PATH="$HOME/.cask/bin:$PATH"
-
-#set up pyenv evironment
-export PYENV_ROOT=/usr/local/pyenv
-export PATH="$PYENV_ROOT/bin:$PATH" 
-eval "$(pyenv init -)" 
-eval "$(pyenv virtualenv-init -)"
-
-#set up rvm environment
-# RVMSCRIPT="/usr/local/rvm/scripts/rvm"
-# if [ -s $RVMSCRIPT ] ; then
-#    source $RVMSCRIPT
-# fi
+[[ -f $script_dir/functions/index ]] && \
+		source $script_dir/functions/index
+[[ -f $script_dir/tools ]] && \
+		source $script_dir/tools
 
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path
