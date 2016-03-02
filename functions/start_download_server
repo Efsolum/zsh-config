@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 # Start the aria2 download manager using the default config
 
 export ARIA_KEY=$(date +%s) ;\

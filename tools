@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 # Additional user tools go here.
 
 # set PATH so it includes user's private bin if it exists

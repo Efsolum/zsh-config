@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 # recoll <library> <x display>
 
 [[ -n $2 ]] && export DISPLAY=:$2

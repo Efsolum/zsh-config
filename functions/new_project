@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 # Create a new project directory with the specified layout
 
 PROJECT_NAME=$1

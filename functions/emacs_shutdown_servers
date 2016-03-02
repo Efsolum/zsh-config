@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 
 emacsclient -s default -e '(kill-emacs)'
 emacsclient -s projects -e '(kill-emacs)'

@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 
 # function_dir=$HOME/.zfunctions/
 function_dir=$(dirname $_)

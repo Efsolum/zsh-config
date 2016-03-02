@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 
 SESSION_NAME=$1
 PROJECT_ROOT="$HOME/Projects/$SESSION_NAME/"

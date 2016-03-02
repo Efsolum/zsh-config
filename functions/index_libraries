@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 
 LOG_PATH="$HOME/History/logs/recoll"
 LOG_FILE="$LOG_PATH/recoll-$(date +%s).log"

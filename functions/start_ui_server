@@ -1,3 +1,3 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 
 ruby -run -e httpd $HOME/web_apps/webui-aria2/ -p 8080

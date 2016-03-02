@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: sh; sh-shell: zsh;-*-
 
 # Purpose
 # Load custom project zsh config in a new shell instance/enviroment
