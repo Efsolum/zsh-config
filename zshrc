@@ -26,7 +26,7 @@ setopt SHARE_HISTORY
 
 export TERM=xterm-256color
 export HISTSIZE=100000
-export SAVEHIST=100000
+export SAVEHIST=$HISTSIZE
 export HISTFILE=~/.zhistory
 
 # print "Value: $script_dir"
