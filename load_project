@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+# Purpose
+# Load custom project zsh config in a new shell instance/enviroment
+# Arguments: 'Project Directory Name'
+
+TARGET_PROJECT=$1
+PROJECT_LOAD_PATH=$HOME/Projects/$TARGET_PROJECT/zproject
+
+if [[ -d $PROJECT_LOAD_PATH ]]; then
+		ZDOTDIR=$PROJECT_LOAD_PATH zsh -li
+fi
