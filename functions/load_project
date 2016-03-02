@@ -1,7 +1,7 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
 # Purpose
-# Load custom project zsh config in a new shell instance/enviroment
+# Load custom project zsh config in a new shell instance/environment
 # Arguments: 'Project Directory Name'
 
 TARGET_PROJECT=$1
