@@ -11,6 +11,9 @@ autoload -U compinit; compinit
 bindkey -e # default to emacs keybindings
 bindkey "^Hm" run-help # C-h m
 
+setopt AUTO_PUSHD
+setopt AUTO_PUSHD
+setopt COMPLETE_IN_WORD
 setopt EXTENDED_GLOB
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
@@ -22,6 +25,7 @@ setopt HIST_VERIFY
 setopt INC_APPEND_HISTORY
 setopt INTERACTIVE_COMMENTS
 setopt PROMPT_SUBST
+setopt PUSHD_IGNORE_DUPS
 setopt SHARE_HISTORY
 
 export TERM=xterm-256color
