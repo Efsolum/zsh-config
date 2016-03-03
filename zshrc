@@ -3,16 +3,9 @@
 # obtain agrument of last command
 script_dir=$(dirname $_)
 
-# initialize the prompt system promptinit
-autoload -U promptinit
-promptinit
-# prompt fade red
-prompt fire yellow red yellow
-
+autoload -U promptinit; promptinit; prompt fire yellow red yellow
 autoload -U zmv
-
-autoload -U compinit
-compinit
+autoload -U compinit; compinit
 
 # Keybindings
 bindkey -e # default to emacs keybindings
