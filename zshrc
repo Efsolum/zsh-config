@@ -1,3 +1,5 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+
 # obtain agrument of last command
 script_dir=$(dirname $_)
 
