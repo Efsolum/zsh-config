@@ -14,6 +14,10 @@ autoload -U zmv
 autoload -U compinit
 compinit
 
+# Keybindings
+bindkey -e # default to emacs keybindings
+bindkey "^Hm" run-help # C-h m
+
 setopt EXTENDED_GLOB
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
