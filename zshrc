@@ -28,7 +28,6 @@ setopt PROMPT_SUBST
 setopt PUSHD_IGNORE_DUPS
 setopt SHARE_HISTORY
 
-export TERM=xterm-256color
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 export HISTFILE=~/.zhistory
