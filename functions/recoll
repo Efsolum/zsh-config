@@ -1,7 +1,14 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 # recoll <library> <x display>
 
+# Stashing variables
+envstore save DISPLAY
+[[ -z $RECOLL_CONFDIR ]] || envstore save RECOLL_CONFDIR
+
 [[ -n $2 ]] && export DISPLAY=:$2
 export RECOLL_CONFDIR=/media/Erudite/Indexes/$1
 [[ -d $RECOLL_CONFDIR ]] || mkdir -p $RECOLL_CONFDIR
 /usr/bin/recoll &> /dev/null &
+
+# Restore original value
+eval $(envstore eval | grep DISPLAY)
