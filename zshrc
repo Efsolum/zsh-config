@@ -1,8 +1,5 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
-# obtain agrument of last command
-script_dir=$(dirname $_)
-
 autoload -U promptinit; promptinit; prompt fire yellow red yellow
 autoload -U zmv
 autoload -U compinit; compinit
@@ -30,15 +27,17 @@ setopt SHARE_HISTORY
 
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
-export HISTFILE=~/.zhistory
+export HISTFILE=$ZDOTDIR/history
 
-# print "Value: $script_dir"
-[[ -f $script_dir/functions/index ]] && \
-		source $script_dir/functions/index
-[[ -f $script_dir/tools ]] && \
-		source $script_dir/tools
-[[ -f $script_dir/zplug ]] && \
-		source $script_dir/zplug
+# Stash $PATH
+ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save PATH
+
+[[ -f $ZDOTDIR/functions/index ]] && \
+		source $ZDOTDIR/functions/index
+[[ -f $ZDOTDIR/tools ]] && \
+		source $ZDOTDIR/tools
+[[ -f $ZDOTDIR/zplug_config ]] && \
+		source $ZDOTDIR/zplug_config
 
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path

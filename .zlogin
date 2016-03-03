@@ -1,0 +1,1 @@
+/home/matthew/.zconfig/zlogin

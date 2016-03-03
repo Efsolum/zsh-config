@@ -5,6 +5,10 @@
 # Arguments: 'Project Directory Name'
 
 TARGET_PROJECT=$1
+
+[[ -d $ZDOTDIR ]] && \
+		ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save ZDOTDIR
+
 PROJECT_LOAD_PATH=$HOME/Projects/$TARGET_PROJECT/zproject
 
 if [[ -d $PROJECT_LOAD_PATH ]]; then
