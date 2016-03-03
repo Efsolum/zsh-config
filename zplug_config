@@ -2,6 +2,17 @@
 
 [[ -d $ZPLUG_HOME ]] || \
 		{print 'Installing Zplug'
-		 git clone https://github.com/b4b4r07/zplug $ZPLUG_HOME}
+		 git clone https://github.com/b4b4r07/zplug $ZPLUG_HOME
+		 zplug update --self}
 
 source $ZPLUG_HOME/zplug
+
+zplug "b4b4r07/zplug"
+
+# Install missing plugins
+if ! zplug check; then
+    zplug install
+fi
+
+# source plugins and add commands to $PATH
+zplug load --verbose
