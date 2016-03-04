@@ -1,0 +1,5 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+# Download webpages to pdf documents
+# Arguments: url, document name
+
+wkhtmltopdf -l $1 $HOME/Downloads/browser/$2-$(date +%G%m%d-%H:%M:%S).pdf
