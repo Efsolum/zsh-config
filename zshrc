@@ -34,8 +34,8 @@ ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save PATH
 
 [[ -f $ZDOTDIR/functions/index ]] && \
 		source $ZDOTDIR/functions/index
-[[ -f $ZDOTDIR/tools ]] && \
-		source $ZDOTDIR/tools
+[[ -f $ZDOTDIR/settings/index ]] && \
+		source $ZDOTDIR/settings/index
 [[ -f $ZDOTDIR/zplug_config ]] && \
 		source $ZDOTDIR/zplug_config
 
