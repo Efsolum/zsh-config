@@ -9,7 +9,6 @@ bindkey -e # default to emacs keybindings
 bindkey "^Hm" run-help # C-h m
 
 setopt AUTO_PUSHD
-setopt AUTO_PUSHD
 setopt COMPLETE_IN_WORD
 setopt EXTENDED_GLOB
 setopt EXTENDED_HISTORY
