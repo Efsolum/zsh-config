@@ -3,7 +3,7 @@
 # Simple: what applications to open with what.
 
 # Fallbacks
-
+type ebook-viewer > /dev/null && xdg-mime default ebook-viewer.desktop 'application/x-ms-reader'
 type ebook-viewer > /dev/null && xdg-mime default ebook-viewer.desktop 'application/epub+zip'
 type ebook-viewer > /dev/null && xdg-mime default ebook-viewer.desktop 'application/octet-stream'
 type okular > /dev/null && xdg-mime default okularApplication_chm.desktop 'application/x-chm'
@@ -14,7 +14,6 @@ type zathura > /dev/null && xdg-mime default zathura-ps.desktop 'application/pos
 type fbreader > /dev/null && xdg-mime default FBReader.desktop 'application/octet-stream'
 type fbreader > /dev/null && xdg-mime default FBReader.desktop 'application/epub+zip'
 type fbreader > /dev/null && xdg-mime default FBReader.desktop 'application/x-chm'
-type fbreader > /dev/null && xdg-mime default FBReader.desktop 'application/x-ms-reader'
 type fbreader > /dev/null && xdg-mime default FBReader.desktop 'text/plain'
 type evince > /dev/null && xdg-mime default evince.desktop 'application/pdf'
 type evince > /dev/null && xdg-mime default evince.desktop 'application/postscript'
