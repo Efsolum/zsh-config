@@ -1,0 +1,14 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+# Run a command on all panes in a session
+
+SESSION_NAME=$1
+RUN_COMMAND=$2
+
+panes=("${(@f)$(tmux list-panes -s -t $SESSION_NAME | awk '{gsub(":", "", $1); print $1}')}")
+
+for pane in $panes;
+do
+		# print $pane
+		tmux send-keys -l -t $SESSION_NAME:$pane "$RUN_COMMAND"
+		tmux send-keys -t $SESSION_NAME:$pane 'C-m'
+done

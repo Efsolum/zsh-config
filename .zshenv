@@ -1,1 +1,1 @@
-/home/matthew/.zconfig/zshenv
+zshenv

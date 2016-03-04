@@ -1,7 +1,7 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
 SESSION_NAME=$1
-PROJECT_ROOT="$HOME/Projects/$SESSION_NAME/"
+PROJECT_ROOT="$HOME/Projects/"
 
 env TMUX='' tmux new-session -d -c $PROJECT_ROOT -s $SESSION_NAME
 
