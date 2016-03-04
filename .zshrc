@@ -1,1 +1,1 @@
-/home/matthew/.zconfig/zshrc
+zshrc
