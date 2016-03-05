@@ -41,6 +41,9 @@ ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save PATH
 
 # Personal aliases
 alias lps=local_project_env
+alias noblank='xset -dpms; xset s off'
+alias lockscreen='i3lock -d -c 000070'
+alias zshrc="source $ZDOTDIR/.zshrc"
 
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path
