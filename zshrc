@@ -7,6 +7,7 @@ autoload -U compinit; compinit
 # Keybindings
 bindkey -e # default to emacs keybindings
 bindkey "^Hm" run-help # C-h m
+bindkey "^W" kill-region # C-w
 
 setopt AUTO_PUSHD
 setopt COMPLETE_IN_WORD
