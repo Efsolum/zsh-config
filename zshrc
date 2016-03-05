@@ -38,6 +38,9 @@ ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save PATH
 [[ -f $ZDOTDIR/zplug_config ]] && \
 		source $ZDOTDIR/zplug_config
 
+# Personal aliases
+alias lps=local_project_env
+
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path
 typeset -U PATH
