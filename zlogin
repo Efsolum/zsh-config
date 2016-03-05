@@ -1,10 +1,14 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
-# start emacs servers
+typeset -A inprogress
 instances=('default' 'projects')
+
+# start emacs servers
 for inst in $instances
 do
-		if [ ! -e "/tmp/emacs$(id -u $USERNAME)/$inst" ]
+		inprogress[$inst]=$(pgrep -la emacs | grep daemon | grep $inst)
+		if [ ! -e "/tmp/emacs$(id -u $USERNAME)/$inst" ] && \
+					 [ -z $inprogress[$inst] ]
 		then
 				print "starting emacs $inst server"
 				emacs --daemon=$inst &> /dev/null &
