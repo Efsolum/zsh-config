@@ -6,9 +6,9 @@ envstore save DISPLAY
 [[ -z $RECOLL_CONFDIR ]] || envstore save RECOLL_CONFDIR
 
 [[ -n $2 ]] && export DISPLAY=:$2
-export RECOLL_CONFDIR=/media/Erudite/Indexes/$1
-[[ -d $RECOLL_CONFDIR ]] || mkdir -p $RECOLL_CONFDIR
-/usr/bin/recoll &> /dev/null &
+local recoll_confdir=/media/Erudite/Indexes/$1
+[[ -d $recoll_confdir ]] || mkdir -p $recoll_confdir
+RECOLL_CONFDIR=$recoll_confdir command recoll &> /dev/null &
 
 # Restore original value
 eval $(envstore eval | grep DISPLAY)

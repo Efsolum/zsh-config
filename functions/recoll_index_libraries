@@ -1,10 +1,10 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
-LOG_PATH="$HOME/History/logs/recoll"
-LOG_FILE="$LOG_PATH/recoll-$(date +%s).log"
-INDEX_PATH='/media/Erudite/Indexes'
+local LOG_PATH="$HOME/History/logs/recoll"
+local LOG_FILE="$LOG_PATH/recoll-$(date +%s).log"
+local INDEX_PATH='/media/Erudite/Indexes'
 
-library_list=(
+local library_list=(
 		'darkarts'
 		'fiction'
 		'imported'
@@ -16,8 +16,9 @@ library_list=(
 
 for i in "${library_list[@]}"
 do
-		export RECOLL_CONFDIR="$INDEX_PATH/$i"
+		local recoll_confdir="$INDEX_PATH/$i"
 		echo "Processing ${(C)i} Library"
-		echo $RECOLL_CONFDIR >> $LOG_FILE
-		recollindex >>&| $LOG_FILE
+		echo $recoll_confdir >> $LOG_FILE
+		RECOLL_CONFDIR=$recoll_confdir \
+									command recollindex >>&| $LOG_FILE
 done

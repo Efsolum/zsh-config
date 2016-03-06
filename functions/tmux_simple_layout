@@ -1,11 +1,11 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
-SESSION_NAME=$1
-PROJECT_ROOT="$HOME/Projects/"
+local SESSION_NAME=$1
+local PROJECT_ROOT="$HOME/Projects/"
 
 env TMUX='' tmux new-session -d -c $PROJECT_ROOT -s $SESSION_NAME
 
-window_1='run'
+local window_1='run'
 echo "Window: $window_2"
 tmux rename-window -t $SESSION_NAME:0 $window_1
 tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_1
@@ -13,7 +13,7 @@ tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_1
 tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_1
 tmux select-layout -t $SESSION_NAME:$window_1 '29eb,170x48,0,0[170x24,0,0,70,170x23,0,25{56x23,0,25,74,56x23,57,25,75,56x23,114,25,76}]'
 
-window_2='editor'
+local window_2='editor'
 echo "Window: $window_2"
 tmux new-window -a -t $SESSION_NAME -n $window_2
 tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_2

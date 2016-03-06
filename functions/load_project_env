@@ -4,12 +4,12 @@
 # Load custom project zsh config in a new shell instance/environment
 # Arguments: 'Project Directory Name'
 
-TARGET_PROJECT=$1
+local TARGET_PROJECT=$1
 
 [[ -d $ZDOTDIR ]] && \
 		ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save ZDOTDIR
 
-PROJECT_LOAD_PATH=$HOME/Projects/$TARGET_PROJECT/zproject
+local PROJECT_LOAD_PATH=$HOME/Projects/$TARGET_PROJECT/zproject
 
 if [[ -d $PROJECT_LOAD_PATH ]]; then
 		ZDOTDIR=$PROJECT_LOAD_PATH zsh -li

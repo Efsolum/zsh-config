@@ -1,6 +1,6 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 # Start the aria2 download manager using the default config
 
-export ARIA_KEY=$(date +%s) ;\
+local ARIA_KEY=$(date +%s) ;\
 echo $ARIA_KEY > ~/temp/access.key ;\
 aria2c --rpc-secret=$ARIA_KEY
