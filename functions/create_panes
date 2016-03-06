@@ -1,0 +1,12 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+# create/splits panes for the given session
+
+local target=$1 # example: $SESSION_NAME:$window_1
+local num_panes=$(($2 - 1))
+local PROJECT_ROOT=$3
+
+for pane in {1..$num_panes}; do
+		tmux split-window -v -c $PROJECT_ROOT -t $target ||
+				{tmux select-layout -t $target 'even-horizontal'
+				 tmux split-window -v -c $PROJECT_ROOT -t $target}
+done
