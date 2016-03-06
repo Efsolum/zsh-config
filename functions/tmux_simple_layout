@@ -8,19 +8,13 @@ env TMUX='' tmux new-session -d -c $PROJECT_ROOT -s $SESSION_NAME
 local window_1='run'
 echo "Window: $window_2"
 tmux rename-window -t $SESSION_NAME:0 $window_1
-tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_1
-tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_1
-tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_1
+create_panes $SESSION_NAME:$window_1 4 $PROJECT_ROOT
 tmux select-layout -t $SESSION_NAME:$window_1 '29eb,170x48,0,0[170x24,0,0,70,170x23,0,25{56x23,0,25,74,56x23,57,25,75,56x23,114,25,76}]'
 
 local window_2='editor'
 echo "Window: $window_2"
 tmux new-window -a -t $SESSION_NAME -n $window_2
-tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_2
-tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_2
-tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_2
-tmux select-layout -t $SESSION_NAME:$window_2 'even-horizontal'
-tmux split-window -v -c $PROJECT_ROOT -t $SESSION_NAME:$window_2
+create_panes $SESSION_NAME:$window_1 5 $PROJECT_ROOT
 tmux select-layout -t $SESSION_NAME:$window_2 '7548,170x48,0,0{113x48,0,0,131,56x48,114,0[56x11,114,0,132,56x11,114,12,133,56x11,114,24,134,56x12,114,36,135]}'
 tmux send-keys -l -t $SESSION_NAME:$window_2'.0' 'emacsclient -s projects -t'
 tmux send-keys -t $SESSION_NAME:$window_2'.0' 'Enter'
