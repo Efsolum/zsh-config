@@ -1,0 +1,32 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+# Default tmux template loaded on login
+
+local SESSION_NAME='General'
+local PROJECT_ROOT="$HOME"
+
+env TMUX='' tmux new-session -d -c $PROJECT_ROOT -s $SESSION_NAME
+
+local window_1='main'
+tmux rename-window -t $SESSION_NAME:0 $window_1
+create_panes $SESSION_NAME:$window_1 5 $PROJECT_ROOT
+tmux select-layout -t $SESSION_NAME:$window_1 '804b,170x48,0,0{85x48,0,0[85x24,0,0,9,85x23,0,25,13],84x48,86,0[84x24,86,0,10,84x11,86,25,11,84x11,86,37,12]}'
+
+local window_2='admin'
+tmux new-window -a -c $PROJECT_ROOT -t $SESSION_NAME -n $window_2
+create_panes $SESSION_NAME:$window_2 6 $PROJECT_ROOT
+tmux select-layout -t $SESSION_NAME:$window_2 '0cda,170x48,0,0{90x48,0,0[90x24,0,0,14,90x23,0,25,19],79x48,91,0[79x11,91,0,15,79x11,91,12,16,79x11,91,24,17,79x12,91,36,18]}'
+
+local window_3='process'
+tmux new-window -a -c $PROJECT_ROOT -t $SESSION_NAME -n $window_3
+create_panes $SESSION_NAME:$window_3 3 $PROJECT_ROOT
+tmux select-layout -t $SESSION_NAME:$window_3 'a0c0,170x48,0,0[170x34,0,0,25,170x13,0,35{85x13,0,35,26,84x13,86,35,27}]'
+tmux send-keys -l -t $SESSION_NAME:$window_3'.0' 'htop'
+tmux send-keys -t $SESSION_NAME:$window_3'.0' 'Enter'
+tmux select-pane -t $SESSION_NAME:$window_3'.0'
+
+local window_4='download'
+tmux new-window -a -c $PROJECT_ROOT -t $SESSION_NAME -n $window_4
+create_panes $SESSION_NAME:$window_4 5 $PROJECT_ROOT
+tmux select-layout -t $SESSION_NAME:$window_4 "c02c,170x48,0,0{110x48,0,0,119,59x48,111,0[59x11,111,0,120,59x11,111,12,121,59x11,111,24,122,59x12,111,36,123]}"
+
+tmux select-window -t $SESSION_NAME:$window_1

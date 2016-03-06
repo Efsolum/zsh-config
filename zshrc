@@ -45,6 +45,12 @@ alias noblank='xset -dpms; xset s off'
 alias lockscreen='i3lock -d -c 000070'
 alias zshrc="source $ZDOTDIR/.zshrc"
 
+# Start tmux session using default layout
+sessionup=$(tmux list-sessions | grep General:)
+if [[ -z $TMUX ]] && [[ -z $sessionup ]]; then
+		tmux_default_layout
+fi
+
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path
 typeset -U PATH
