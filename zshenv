@@ -10,7 +10,7 @@ export GLOBAL_ENVSTORE_FILE=$HOME/.zconfig/userstash
 export ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE
 
 # Directory for GNU Stow
-export STOW_DIR=$HOME/dotfiles/
+export STOW_DIR=$HOME/dotfiles
 
 # XDG Settings
 # export XDG_CONFIG_HOME=
