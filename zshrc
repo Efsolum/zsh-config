@@ -48,7 +48,7 @@ alias exzsh="exec zsh -li"
 
 alias apts='apt-cache search'
 alias aptf='apt-file search'
-alias aptu="print 'apt-get update && apt-file update' | zsh -s"
+alias aptu="print 'apt-get update && apt-file update' | sudo zsh -s"
 alias aptm='apt-cache madison'
 
 # Start tmux session using default layout
