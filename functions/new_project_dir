@@ -1,9 +1,21 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 # Create a new project directory with the specified layout
 
-PROJECT_NAME=$1
-PROJECT_ROOT="$HOME/Projects/$PROJECT_NAME/"
+local PROJECT_NAME=$1
+local PROJECT_ROOT="$HOME/Projects/$PROJECT_NAME/"
 
-mkdir -p $PROJECT_ROOT/{design,notes,platform,src,staging}
-touch $PROJECT_ROOT/.projectile
+mkdir -p $PROJECT_ROOT/{design,notes,platform,src,staging,zproject}
+mkdir $PROJECT_ROOT/zproject/functions/
 mkdir $PROJECT_ROOT/platform/logs/
+
+touch $PROJECT_ROOT/.projectile
+touch $PROJECT_ROOT/zproject/{zshenv,zshrc,zlogin,zlogout}
+
+ln --symbolic --relative \
+	 $PROJECT_ROOT/zproject/zshenv $PROJECT_ROOT/zproject/.zshenv
+ln --symbolic --relative \
+	 $PROJECT_ROOT/zproject/zshrc $PROJECT_ROOT/zproject/.zshrc
+ln --symbolic --relative \
+	 $PROJECT_ROOT/zproject/zlogin $PROJECT_ROOT/zproject/.zlogin
+ln --symbolic --relative \
+	 $PROJECT_ROOT/zproject/zlogout $PROJECT_ROOT/zproject/.zlogout
