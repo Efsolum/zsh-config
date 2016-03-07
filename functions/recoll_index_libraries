@@ -4,7 +4,8 @@ local LOG_PATH="$HOME/History/logs/recoll"
 local LOG_FILE="$LOG_PATH/recoll-$(date +%s).log"
 local INDEX_PATH='/media/Erudite/Indexes'
 
-local library_list=(
+local library_list
+library_list=(
 		'darkarts'
 		'fiction'
 		'imported'
