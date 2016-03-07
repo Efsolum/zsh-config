@@ -12,6 +12,10 @@ zplug "b4b4r07/zplug" # ZSH & CLI Package Manager
 # Local Scripts
 zplug "$ZDOTDIR/scripts", from:local, as:command
 
+# Local Applications
+zplug "$ZDOTDIR/desktop_apps/firefox-dev", \
+			from:local, as:command, of:firefox, file:firefox-dev, \
+			if:"[[ -d \"$ZDOTDIR/desktop_apps/firefox-dev\" ]]"
 
 # Install missing plugins
 if ! zplug check; then
