@@ -45,6 +45,11 @@ alias noblank='xset -dpms; xset s off'
 alias lockscreen='i3lock -d -c 000070'
 alias zshrc="source $ZDOTDIR/.zshrc"
 
+alias apts='apt-cache search'
+alias aptf='apt-file search'
+alias aptu="print 'apt-get update && apt-file update' | zsh -s"
+alias aptm='apt-cache madison'
+
 # Start tmux session using default layout
 sessionup=$(tmux list-sessions | grep General:)
 if [[ -z $TMUX ]] && [[ -z $sessionup ]]; then
