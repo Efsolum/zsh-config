@@ -8,6 +8,9 @@
 source $ZPLUG_HOME/zplug
 
 zplug "b4b4r07/zplug"
+# Local Scripts
+zplug "$ZDOTDIR/scripts", from:local, as:command
+
 
 # Install missing plugins
 if ! zplug check; then
