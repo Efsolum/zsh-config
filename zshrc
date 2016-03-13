@@ -50,6 +50,7 @@ alias apts='apt-cache search'
 alias aptf='apt-file search'
 alias aptu="print 'apt-get update && apt-file update' | sudo zsh -s"
 alias aptm='apt-cache madison'
+alias ssha=ssh-add
 
 # Start tmux session using default layout
 sessionup=$(tmux list-sessions | grep General:)
