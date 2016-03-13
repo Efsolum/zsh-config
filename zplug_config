@@ -23,4 +23,10 @@ if ! zplug check; then
 fi
 
 # source plugins and add commands to $PATH
-zplug load --verbose
+zplug clear --force > /dev/null
+zplug load
+
+# update symlinks to relative paths
+if [[ -d $ZDOTDIR/zplug/bin/ ]]; then
+		symlinks -dc $ZDOTDIR/{zplug/bin/,zplug}
+fi

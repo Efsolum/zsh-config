@@ -25,7 +25,9 @@ eval "$(pyenv virtualenv-init -)"
 # fi
 
 # Check for external dependencies
-command_list=(entr envstore)
+command_list=(entr
+							envstore
+							symlinks)
 for cmd in $command_list;
 do
 		type $cmd >& /dev/null
