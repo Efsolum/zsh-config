@@ -1,0 +1,9 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+# finding all aplication the can open file or MIME type
+
+local mime_type=$1
+
+find /usr/share/applications/ $HOME/.local/share/applications/ \
+		 -type f -iname \*.desktop -print0 | \
+		xargs -0 grep $mime_type | \
+		awk -F : '{print $1}'
