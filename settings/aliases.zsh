@@ -22,5 +22,6 @@ alias aptm='apt-cache madison'
 
 # SSH aliases
 alias ssha=ssh-add
+alias sshl="ssh-add -L"
 alias sshx="ssh-add -x"
 alias sshX="ssh-add -X"
