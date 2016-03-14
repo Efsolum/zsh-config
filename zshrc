@@ -33,9 +33,9 @@ export HISTFILE=$ZDOTDIR/history
 ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save PATH
 
 [[ -f $ZDOTDIR/functions/index ]] && \
-		source $ZDOTDIR/functions/index.zsh
+		source $ZDOTDIR/functions/index
 [[ -f $ZDOTDIR/settings/index.zsh ]] && \
-		source $ZDOTDIR/settings/index
+		source $ZDOTDIR/settings/index.zsh
 [[ -f $ZDOTDIR/Zplug.zsh ]] && \
 		source $ZDOTDIR/Zplug.zsh
 

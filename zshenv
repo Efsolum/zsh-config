@@ -14,3 +14,9 @@ export STOW_DIR=$HOME/dotfiles
 
 # XDG Settings
 # export XDG_CONFIG_HOME=
+
+# zonfig log directory
+export ZCONFIG_LOG_DIR=$ZDOTDIR/logs
+export ZCONFIG_LOG=$ZCONFIG_LOG_DIR/zconfig-$(date +%G%m%d).log
+[[ -d $ZCONFIG_LOG_DIR ]] || \
+		mkdir $ZCONFIG_LOG_DIR

@@ -42,5 +42,6 @@ zplug load
 
 # update symlinks to relative paths
 if [[ -d $ZDOTDIR/zplug/bin/ ]]; then
-		symlinks -dc $ZDOTDIR/{zplug/bin/,zplug}
+		symlinks -dc $ZDOTDIR/{zplug/bin/,zplug} | \
+				sed 's\^\symlinks: \' &>> $ZCONFIG_LOG
 fi
