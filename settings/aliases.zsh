@@ -5,12 +5,14 @@
 alias ds="dirs -v"
 alias pd=popd
 
+# Personal/miscellaneous aliases
 alias lps=local_project_env
 alias noblank='xset -dpms; xset s off'
 alias lockscreen='i3lock -d -c 000070'
 alias zshrc='source $ZDOTDIR/.zshrc'
 alias exzsh='exec zsh -li'
 
+# APT aliases
 alias apts='apt-cache search'
 alias aptf='apt-file search'
 alias aptu="print 'apt-get update && apt-file update' | sudo zsh -s"
