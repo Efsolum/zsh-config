@@ -33,11 +33,11 @@ export HISTFILE=$ZDOTDIR/history
 ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save PATH
 
 [[ -f $ZDOTDIR/functions/index ]] && \
-		source $ZDOTDIR/functions/index
-[[ -f $ZDOTDIR/settings/index ]] && \
+		source $ZDOTDIR/functions/index.zsh
+[[ -f $ZDOTDIR/settings/index.zsh ]] && \
 		source $ZDOTDIR/settings/index
-[[ -f $ZDOTDIR/zplug_config ]] && \
-		source $ZDOTDIR/zplug_config
+[[ -f $ZDOTDIR/Zplug.zsh ]] && \
+		source $ZDOTDIR/Zplug.zsh
 
 # Start tmux session using default layout
 sessionup=$(tmux list-sessions | grep General:)
