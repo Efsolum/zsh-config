@@ -17,4 +17,8 @@ alias aptu="print 'apt-get update && apt-file update' | sudo zsh -s"
 alias apti='sudo apt-get install'
 alias aptp='apt-cache policy'
 alias aptm='apt-cache madison'
+
+# SSH aliases
 alias ssha=ssh-add
+alias sshx="ssh-add -x"
+alias sshX="ssh-add -X"
