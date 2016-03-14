@@ -1,6 +1,10 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
-# Personal aliases
+# Directory related aliases
+# setopt AUTO_PUSHD
+alias ds="dirs -v"
+alias pd=popd
+
 alias lps=local_project_env
 alias noblank='xset -dpms; xset s off'
 alias lockscreen='i3lock -d -c 000070'
