@@ -1,0 +1,7 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+
+directory=$1
+
+emacsclient \
+		--socket-name projects \
+		--eval "(dired \"$directory\")"
