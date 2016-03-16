@@ -40,5 +40,5 @@ do
 done
 
 # Calibre settings
-CALIBRE_TEMP_DIR=$HOME/temp/calibre
+CALIBRE_TEMP_DIR=$HOME/tmp/calibre
 [[ -d $CALIBRE_TEMP_DIR ]] || mkdir -p $CALIBRE_TEMP_DIR
