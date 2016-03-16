@@ -25,7 +25,8 @@ eval "$(pyenv virtualenv-init -)"
 # fi
 
 # Check for external dependencies
-command_list=(entr
+command_list=(tmux
+							entr
 							envstore
 							symlinks)
 for cmd in $command_list;
