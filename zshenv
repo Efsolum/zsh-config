@@ -1,5 +1,9 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 
+# Add these two lines to $HOME/.zshenv
+# export ZDOTDIR=$HOME/.zconfig
+# source $ZDOTDIR/.zshenv
+
 if [[ -n $TMUX ]] ; then
 		export TERM=screen-256color
 else
