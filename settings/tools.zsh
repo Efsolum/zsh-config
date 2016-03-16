@@ -9,7 +9,7 @@ fi
 export EDITOR="emacsclient -s projects -c"
 export VISUAL=$EDITOR
 
-#emacs cask
+# Emacs Cask
 export PATH="$HOME/.cask/bin:$PATH"
 
 #set up pyenv evironment
