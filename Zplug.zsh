@@ -27,9 +27,9 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "$ZDOTDIR/scripts", from:local, as:command
 
 # Local Applications
-zplug "$ZDOTDIR/desktop_apps/firefox-dev", \
+zplug "$DESKTOP_APPS/firefox-dev", \
 			from:local, as:command, of:firefox, file:firefox-dev, \
-			if:"[[ -d \"$ZDOTDIR/desktop_apps/firefox-dev\" ]]"
+			if:"[[ -d \"$DESKTOP_APPS/firefox-dev\" ]]"
 
 # Install missing plugins
 if ! zplug check; then
