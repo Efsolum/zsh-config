@@ -5,7 +5,12 @@
 alias ds="dirs -v"
 alias pd=popd
 
-# Personal/miscellaneous aliases
+# Flash/Portable drive related aliases
+alias uds="udisksctl status"
+alias udm="udisksctl mount --block-device"
+alias udu="udisksctl unmount --block-device"
+
+#miscellaneous aliases
 alias lps=local_project_env
 alias noblank='xset -dpms; xset s off'
 alias lockscreen='i3lock -d -c 000070'
