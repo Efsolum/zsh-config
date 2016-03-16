@@ -29,3 +29,9 @@ export ZCONFIG_LOG=$ZCONFIG_LOG_DIR/zconfig-$(date +%G%m%d).log
 # zplug directory, for storing zsh dpendencies
 export ZPLUG_HOME=$ZDOTDIR/zplug
 
+# Application directories
+export DESKTOP_APPS=$ZDOTDIR/desktop_apps
+export CLI_APPS=$ZDOTDIR/cli_apps
+
+[[ -d $DESKTOP_APPS ]] || mkdir -p $DESKTOP_APPS
+[[ -d $CLI_APPS ]] || mkdir -p $CLI_APPS
