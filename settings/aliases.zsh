@@ -5,6 +5,10 @@
 alias ds="dirs -v"
 alias pd=popd
 
+# Project related
+alias lpe=load_project_env
+alias npd=new_project_dir
+
 # Flash/Portable drive related aliases
 alias uds="udisksctl status"
 alias udm="udisksctl mount --block-device"
@@ -12,7 +16,6 @@ alias udu="udisksctl unmount --block-device"
 alias udi="udisksctl info --block-device"
 
 #miscellaneous aliases
-alias lps=local_project_env
 alias noblank='xset -dpms; xset s off'
 alias lockscreen='i3lock -d -c 000070'
 alias zshrc='source $ZDOTDIR/.zshrc'
