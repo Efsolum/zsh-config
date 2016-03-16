@@ -9,6 +9,7 @@ alias pd=popd
 alias uds="udisksctl status"
 alias udm="udisksctl mount --block-device"
 alias udu="udisksctl unmount --block-device"
+alias udi="udisksctl info --block-device"
 
 #miscellaneous aliases
 alias lps=local_project_env
