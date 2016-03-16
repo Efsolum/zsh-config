@@ -13,8 +13,11 @@ export VISUAL=$EDITOR
 export PATH="$HOME/.cask/bin:$PATH"
 
 #set up pyenv evironment
-export PYENV_ROOT=/usr/local/pyenv
 export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT ]] || \
+		{curl -L \
+					https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer |\
+						bash}
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 

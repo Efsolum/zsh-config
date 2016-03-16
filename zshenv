@@ -35,3 +35,7 @@ export CLI_APPS=$ZDOTDIR/cli_apps
 
 [[ -d $DESKTOP_APPS ]] || mkdir -p $DESKTOP_APPS
 [[ -d $CLI_APPS ]] || mkdir -p $CLI_APPS
+
+# Python Pyenv
+# export PYENV_ROOT=/usr/local/pyenv
+export PYENV_ROOT=$CLI_APPS/pyenv
