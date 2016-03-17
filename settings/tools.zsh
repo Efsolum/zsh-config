@@ -2,15 +2,15 @@
 # Additional user tools go here.
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    export PATH="$HOME/bin:$PATH"
-fi
+[[ -d "$HOME/bin" ]] && path=($HOME/bin $path)
 
-export EDITOR="emacsclient -s projects -c"
-export VISUAL=$EDITOR
+export EDITOR="emacsclient -s projects -t"
+export VISUAL="emacsclient -s projects -c"
 
 # Emacs Cask
-export PATH="$HOME/.cask/bin:$PATH"
+[[ -d "$HOME/.cask" ]] || \
+		curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+[[ -d "$HOME/.cask/bin" ]] && path=($HOME/.cask/bin $path)
 
 #set up pyenv evironment
 export PATH="$PYENV_ROOT/bin:$PATH"
