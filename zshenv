@@ -11,7 +11,7 @@ else
 fi
 
 # Declare a user-wide stash
-export GLOBAL_ENVSTORE_FILE=$HOME/.zconfig/userstash
+export GLOBAL_ENVSTORE_FILE=$ZDOTDIR/userstash
 export ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE
 
 # Directory for GNU Stow
