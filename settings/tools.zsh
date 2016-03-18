@@ -9,6 +9,10 @@ export VISUAL="emacsclient -s projects -c"
 
 # gnupg & gnupg2 config & data directory
 export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+
+# Git config file path
+export GIT_CONFIG=$XDG_CONFIG_HOME/gitconfig
+
 # Emacs Cask
 [[ -d "$HOME/.cask" ]] || \
 		curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
