@@ -7,6 +7,8 @@
 export EDITOR="emacsclient -s projects -t"
 export VISUAL="emacsclient -s projects -c"
 
+# gnupg & gnupg2 config & data directory
+export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 # Emacs Cask
 [[ -d "$HOME/.cask" ]] || \
 		curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
