@@ -4,6 +4,15 @@
 # export ZDOTDIR=$HOME/.zconfig
 # source $ZDOTDIR/.zshenv
 
+# XDG related variables
+# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+XDG_CONFIG_HOME="$HOME/.config"
+# XDG_CONFIG_DIRS=
+XDG_DATA_HOME="$HOME/.local/share"
+# XDG_DATA_DIRS=
+XDG_CACHE_HOME="$HOME/.cache"
+# XDG_RUNTIME_DIR=
+
 if [[ -n $TMUX ]] ; then
 		export TERM=screen-256color
 else
