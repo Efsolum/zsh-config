@@ -18,6 +18,9 @@ export GIT_CONFIG=$XDG_CONFIG_HOME/gitconfig
 		curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 [[ -d "$HOME/.cask/bin" ]] && path=($HOME/.cask/bin $path)
 
+# Unison File Synchronizer config directory
+export UNISON=$XDG_CONFIG_HOME/unison
+
 #set up pyenv evironment
 export PATH="$PYENV_ROOT/bin:$PATH"
 [[ -d $PYENV_ROOT ]] || \
