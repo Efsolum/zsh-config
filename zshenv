@@ -48,4 +48,3 @@ export CLI_APPS=$ZDOTDIR/cli_apps
 
 # Python Pyenv
 export PYENV_ROOT=$CLI_APPS/pyenv
-
