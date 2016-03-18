@@ -6,3 +6,6 @@ export CALIBRE_CACHE_DIRECTORY=$XDG_DATA_HOME/calibre
 # [[ -d $CALIBRE_TEMP_DIR ]] || \
 # 		mkdir -p $CALIBRE_TEMP_DIR
 
+# Audacity config directory
+export AUDACITY_PATH=$XDG_DATA_HOME/audacity-data
+
