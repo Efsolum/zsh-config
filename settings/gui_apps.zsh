@@ -9,3 +9,9 @@ export CALIBRE_CACHE_DIRECTORY=$XDG_DATA_HOME/calibre
 # Audacity config directory
 export AUDACITY_PATH=$XDG_DATA_HOME/audacity-data
 
+
+# GIMP environment variables
+# mkdir -p $GIMP2_DATADIR/menus
+# rsync -av /usr/share/gimp/2.0/menus/ $GIMP2_DATADIR/menus/
+export GIMP2_DIRECTORY=$XDG_CONFIG_HOME/gimp2
+export GIMP2_DATADIR=$XDG_DATA_HOME/gimp2
