@@ -13,6 +13,7 @@ XDG_DATA_HOME="$HOME/.local/share"
 XDG_CACHE_HOME="$HOME/.cache"
 # XDG_RUNTIME_DIR=
 
+# Setup terminal for colors
 if [[ -n $TMUX ]] ; then
 		export TERM=screen-256color
 else
@@ -46,5 +47,5 @@ export CLI_APPS=$ZDOTDIR/cli_apps
 [[ -d $CLI_APPS ]] || mkdir -p $CLI_APPS
 
 # Python Pyenv
-# export PYENV_ROOT=/usr/local/pyenv
 export PYENV_ROOT=$CLI_APPS/pyenv
+

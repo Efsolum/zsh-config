@@ -1,3 +1,7 @@
+
+# Gstreamer Plugin path
+# export GST_PLUGIN_SYSTEM_PATH="$XDG_DATA_HOME/gstreamer-0.10:/usr/lib/gstreamer-0.10"
+
 # Calibre settings
 export CALIBRE_CONFIG_DIRECTORY=$XDG_CONFIG_HOME/calibre
 export CALIBRE_TEMP_DIR=$XDG_CACHE_HOME/calibre
@@ -9,6 +13,8 @@ export CALIBRE_CACHE_DIRECTORY=$XDG_DATA_HOME/calibre
 # Audacity config directory
 export AUDACITY_PATH=$XDG_DATA_HOME/audacity-data
 
+export LYX_USERDIR_21x=$XDG_CONFIG_HOME/lyx
+export MPLAYER_HOME=$XDG_CONFIG_HOME/mplayer
 
 # GIMP environment variables
 # mkdir -p $GIMP2_DATADIR/menus

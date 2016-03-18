@@ -27,6 +27,8 @@ eval "$(pyenv virtualenv-init -)"
 #    source $RVMSCRIPT
 # fi
 
+export VAGRANT_HOME=$XDG_DATA_HOME/vagrant
+
 # Check for external dependencies
 command_list=(tmux
 							entr
@@ -38,7 +40,3 @@ do
 		[[ $? -ne 0 ]] && \
 				print "Error: $cmd is not installed, please do so."
 done
-
-# Calibre settings
-CALIBRE_TEMP_DIR=$HOME/tmp/calibre
-[[ -d $CALIBRE_TEMP_DIR ]] || mkdir -p $CALIBRE_TEMP_DIR
