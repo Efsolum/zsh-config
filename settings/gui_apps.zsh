@@ -1,3 +1,4 @@
+# -*- mode: sh; sh-shell: zsh;-*-
 
 # Gstreamer Plugin path
 # export GST_PLUGIN_SYSTEM_PATH="$XDG_DATA_HOME/gstreamer-0.10:/usr/lib/gstreamer-0.10"
