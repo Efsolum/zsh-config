@@ -20,8 +20,9 @@ else
 		export TERM=xterm-256color
 fi
 
-# Declare a user-wide stash
+# Declare a user-wide stashes
 export GLOBAL_ENVSTORE_FILE=$ZDOTDIR/userstash
+export ESSENTIAL_ENVSTORE_FILE=$ZDOTDIR/essentialstash
 export ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE
 
 # Directory for GNU Stow
