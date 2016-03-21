@@ -18,6 +18,8 @@ type fbreader > /dev/null && xdg-mime default FBReader.desktop 'application/octe
 type fbreader > /dev/null && xdg-mime default FBReader.desktop 'application/epub+zip'
 type fbreader > /dev/null && xdg-mime default FBReader.desktop 'application/x-chm'
 type fbreader > /dev/null && xdg-mime default FBReader.desktop 'text/plain'
+
+type zathura > /dev/null && xdg-mime default zathura-cb.desktop 'application/x-cbr'
 type zathura > /dev/null && xdg-mime default zathura-ps.desktop 'application/postscript'
 type zathura > /dev/null && xdg-mime default zathura-pdf-poppler.desktop 'application/pdf'
 type zathura > /dev/null && xdg-mime default zathura-djvu.desktop 'image/vnd.djvu'
@@ -27,3 +29,5 @@ type emacsclient > /dev/null && \
 		xdg-mime default emacs-dired.desktop 'inode/directory'
 type emacsclient > /dev/null && \
 		xdg-mime default emacs-dired.desktop 'application/x-directory'
+
+type sakura > /dev/null && xdg-mime default sakura.desktop 'x-terminal-emulator'
