@@ -3,7 +3,7 @@
 # Aruguments: $1, quoted string
 
 local PROJECT_STRING="$1 $(date +%s)"
-local PROJECT_NAME=${${PROJECT_STRING// /-}//_/-}
+local PROJECT_NAME=${(L)${${PROJECT_STRING// /-}//_/-}}
 local PROJECT_ROOT="$HOME/Projects/$PROJECT_NAME/"
 
 print 'New project root:' $PROJECT_ROOT
