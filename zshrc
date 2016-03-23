@@ -30,9 +30,10 @@ export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 export HISTFILE=$ZDOTDIR/history
 
-# Stash $PATH
+# Stash variables
 [[ -z $TMUX ]] && \
 		{ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore clear
+		 ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save ZDOTDIR
 		 ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save PATH}
 
 [[ -f $ZDOTDIR/functions/index ]] && \
