@@ -23,6 +23,7 @@ export UNISON=$XDG_CONFIG_HOME/unison
 
 #set up pyenv evironment
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 [[ -d $PYENV_ROOT ]] || \
 		{curl -L \
 					https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer |\
