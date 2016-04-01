@@ -1,0 +1,53 @@
+
+local profile_prefix_path=$XDG_DATA_HOME/firefox_profiles
+
+case $1 in
+		(path)
+				print $profile_prefix_path
+				;;
+		(create)
+				[[ -d $profile_prefix_path/$2 ]] || \
+						mkdir --parents $profile_prefix_path/$2
+				;;
+		(start)
+				[[ -d $profile_prefix_path/$2 ]] || \
+						mkdir --parents $profile_prefix_path/$2
+				command firefox \
+								--profile $profile_prefix_path/$2 \
+								--new-instance &
+				;;
+		(clone)
+				cp \
+						--archive \
+						--verbose \
+						$profile_prefix_path/$2 \
+						$profile_prefix_path/$3
+				;;
+		(delete)
+				rm -r $profile_prefix_path/$2
+				;;
+		(list)
+				for dir in $(ls --directory $profile_prefix_path/*);
+				do
+						basename $dir
+				done
+				;;
+		(running)
+				ps -eo pid,cmd | grep -P '(firefox|iceweasel)' | grep -v grep
+				;;
+		(help)
+				cat << EOF
+  path -- print profile path
+  create <profile name> -- create a profile if it does not exist
+  start <profile name> -- start firefox with a specific profile
+  clone <current-profile> <new-profile> -- copy an existing profile to a new profile
+  delete <profile name> -- delete an existing profile
+  list -- list available firefox profiles
+  running -- list running firefox profiles
+  help -- print command help output
+EOF
+				;;
+		(*)
+				command firefox "$@"
+				;; 
+esac
