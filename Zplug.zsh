@@ -23,6 +23,9 @@ zplug "supercrabtree/k"
 # Fish shell like syntax highlighting for Zsh.
 zplug "zsh-users/zsh-syntax-highlighting"
 
+# lightweight and flexible command-line JSON processor
+zplug "stedolan/jq", as:command, from:gh-r, file:jq
+
 # Local Scripts
 zplug "$ZDOTDIR/scripts", from:local, as:command
 
