@@ -1,0 +1,29 @@
+# Make it easy to to start skype with dirferent profiles.
+# Arguments: $1 subcommand, $2 depends on subcommand
+# type skype help for more info
+
+case $1 in
+		(start)
+				command skype \
+								--secondary \
+								--dbpath=$XDG_DATA_HOME/.skype/$2 &
+				;;
+		(list)
+				ls -1 \
+					 --color=auto \
+					 --size \
+					 --human-readable \
+					 --directory $XDG_DATA_HOME/.skype/*
+				;;
+		(running)
+				ps -eo pid,cmd | grep skype | grep -v grep
+				;;
+		(help)
+				cat << EOF
+  start <profile name> -- start skype with a specific profile
+  running -- list running profiles
+  list -- list available profiles
+  help -- print command help output
+EOF
+				;;
+esac
