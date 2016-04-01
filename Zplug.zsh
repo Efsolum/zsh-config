@@ -27,9 +27,13 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "$ZDOTDIR/scripts", from:local, as:command
 
 # Local Applications
-zplug "$DESKTOP_APPS/firefox-dev", \
+zplug "$DESKTOP_APPS/firefox-47.0a2.en-US.linux-x86_64", \
 			from:local, as:command, of:firefox, file:firefox-dev, \
-			if:"[[ -d \"$DESKTOP_APPS/firefox-dev\" ]]"
+			if:"[[ -d \"$DESKTOP_APPS/firefox-47.0a2.en-US.linux-x86_64\" ]]"
+
+zplug "$DESKTOP_APPS/skype-4.3.0.37", \
+			from:local, as:command, of:skype, file:skype, \
+			if:"[[ -d \"$DESKTOP_APPS/skype-4.3.0.37\" ]]"
 
 # Install missing plugins
 if ! zplug check; then
