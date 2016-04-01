@@ -19,7 +19,7 @@ alias udi="udisksctl info --block-device"
 alias noblank='xset -dpms; xset s off'
 alias lockscreen='i3lock -d -c 000070'
 alias zshrc='source $ZDOTDIR/.zshrc'
-alias src="source $ZDOTDIR/.zshenv; source $ZDOTDIR/.zshrc"
+alias src="source $ZDOTDIR/.z{shenv,shrc,login}"
 alias exzsh='exec zsh -li'
 
 # APT aliases
