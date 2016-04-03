@@ -35,3 +35,8 @@ alias ssha=ssh-add
 alias sshl="ssh-add -L"
 alias sshx="ssh-add -x"
 alias sshX="ssh-add -X"
+
+# Sync aliases
+alias syncpersonal="unison personal -batch; unison personal"
+alias syncprojects="unison projects -batch; unison projects"
+alias syncarchived="unison archived -batch; unison archived"
