@@ -10,6 +10,9 @@ source $ZPLUG_HOME/zplug
 zplug "b4b4r07/zplug" # ZSH & CLI Package Manager
 # zplug "zsh-users/zaw", of:zaw.zsh # Zsh anything.el-like widget.
 
+zplug "plugins/battery", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "zakaziko99/agnosterzak-ohmyzsh-theme", of:agnosterzak.zsh-theme
 #  Simplistic interactive filtering tool
 zplug "peco/peco", as:command, from:gh-r
 
