@@ -8,7 +8,6 @@
 source $ZPLUG_HOME/zplug
 
 zplug "b4b4r07/zplug" # ZSH & CLI Package Manager
-# zplug "zsh-users/zaw", of:zaw.zsh # Zsh anything.el-like widget.
 
 # zplug "zakaziko99/agnosterzak-ohmyzsh-theme", of:agnosterzak.zsh-theme
 
@@ -25,6 +24,8 @@ export BULLETTRAIN_EXEC_TIME_SHOW=true
 
 zplug "plugins/battery", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
+zplug "hlissner/zsh-autopair"
+zplug "marzocchi/zsh-notify"
 
 # Vagrant completions
 zplug "plugins/vagrant", from:oh-my-zsh
