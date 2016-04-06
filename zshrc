@@ -48,7 +48,7 @@ if [[ -z $TMUX ]] && [[ -z $sessionup ]]; then
 		tmux_default_layout
 fi
 
-# autoload -U promptinit; promptinit; prompt fire yellow red yellow
+# prompt fire yellow red yellow
 
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path

@@ -10,9 +10,21 @@ source $ZPLUG_HOME/zplug
 zplug "b4b4r07/zplug" # ZSH & CLI Package Manager
 # zplug "zsh-users/zaw", of:zaw.zsh # Zsh anything.el-like widget.
 
+# zplug "zakaziko99/agnosterzak-ohmyzsh-theme", of:agnosterzak.zsh-theme
+
+zplug "caiogondim/bullet-train-oh-my-zsh-theme", of:bullet-train.zsh-theme
+export BULLETTRAIN_CONTEXT_SHOW=true
+export BULLETTRAIN_EXEC_TIME_SHOW=true
+
+# zplug "Ciacho/ciacho-ohmyzsh-theme", of:ciacho.zsh-theme
+
+# zplug "bhilburn/powerlevel9k", of:powerlevel9k.zsh-theme
+# export POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
+# zplug "el1t/statusline", of:"oh-my-zsh/statusline.zsh-theme"
+
 zplug "plugins/battery", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
-zplug "zakaziko99/agnosterzak-ohmyzsh-theme", of:agnosterzak.zsh-theme
 
 # Vagrant completions
 zplug "plugins/vagrant", from:oh-my-zsh
