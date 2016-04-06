@@ -1,4 +1,6 @@
 # -*- mode: sh; sh-shell: zsh;-*-
+[[ -f $ZDOTDIR/Zplug.zsh ]] && \
+		source $ZDOTDIR/Zplug.zsh
 
 autoload -U zmv
 autoload -U compinit; compinit
@@ -39,8 +41,6 @@ export HISTFILE=$ZDOTDIR/history
 		source $ZDOTDIR/functions/index
 [[ -f $ZDOTDIR/settings/index.zsh ]] && \
 		source $ZDOTDIR/settings/index.zsh
-[[ -f $ZDOTDIR/Zplug.zsh ]] && \
-		source $ZDOTDIR/Zplug.zsh
 
 # Start tmux session using default layout
 sessionup=$(tmux list-sessions | grep General:)
