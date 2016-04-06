@@ -4,6 +4,7 @@
 
 autoload -U zmv
 autoload -U compinit; compinit
+autoload -U promptinit; promptinit
 
 # Keybindings
 bindkey -e # default to emacs keybindings
@@ -25,7 +26,9 @@ setopt INTERACTIVE_COMMENTS
 setopt PROMPT_SUBST
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
+setopt PUSHD_TO_HOME
 setopt SHARE_HISTORY
+unsetopt PUSHD_MINUS
 
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
