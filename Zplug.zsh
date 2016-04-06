@@ -9,11 +9,11 @@ source $ZPLUG_HOME/zplug
 
 zplug "b4b4r07/zplug" # ZSH & CLI Package Manager
 
-# zplug "zakaziko99/agnosterzak-ohmyzsh-theme", of:agnosterzak.zsh-theme
-
 zplug "caiogondim/bullet-train-oh-my-zsh-theme", of:bullet-train.zsh-theme
 export BULLETTRAIN_CONTEXT_SHOW=true
 export BULLETTRAIN_EXEC_TIME_SHOW=true
+
+# zplug "zakaziko99/agnosterzak-ohmyzsh-theme", of:agnosterzak.zsh-theme
 
 # zplug "Ciacho/ciacho-ohmyzsh-theme", of:ciacho.zsh-theme
 
