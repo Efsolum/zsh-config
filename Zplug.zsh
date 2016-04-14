@@ -25,6 +25,8 @@ export BULLETTRAIN_EXEC_TIME_SHOW=true
 zplug "plugins/battery", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "hlissner/zsh-autopair"
+
+# apt-get install libnotify-bin xdotool
 zplug "marzocchi/zsh-notify"
 
 # Vagrant completions
@@ -47,16 +49,16 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "stedolan/jq", as:command, from:gh-r, file:jq
 
 # Local Scripts
-zplug "$ZDOTDIR/scripts", from:local, as:command
+# zplug "$ZDOTDIR/scripts", from:local, as:command
 
 # Local Applications
-zplug "$DESKTOP_APPS/firefox-47.0a2.en-US.linux-x86_64", \
-			from:local, as:command, of:firefox, file:firefox-dev, \
-			if:"[[ -d \"$DESKTOP_APPS/firefox-47.0a2.en-US.linux-x86_64\" ]]"
+# zplug "$DESKTOP_APPS/firefox-47.0a2.en-US.linux-x86_64", \
+# 			from:local, as:command, of:firefox, file:firefox-dev, \
+# 			if:"[[ -d \"$DESKTOP_APPS/firefox-47.0a2.en-US.linux-x86_64\" ]]"
 
-zplug "$DESKTOP_APPS/skype-4.3.0.37", \
-			from:local, as:command, of:skype, file:skype, \
-			if:"[[ -d \"$DESKTOP_APPS/skype-4.3.0.37\" ]]"
+# zplug "$DESKTOP_APPS/skype-4.3.0.37", \
+# 			from:local, as:command, of:skype, file:skype, \
+# 			if:"[[ -d \"$DESKTOP_APPS/skype-4.3.0.37\" ]]"
 
 # Install missing plugins
 if ! zplug check; then

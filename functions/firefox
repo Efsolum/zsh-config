@@ -35,10 +35,17 @@ case $1 in
 		(running)
 				ps -eo pid,cmd | grep -P '(firefox|iceweasel)' | grep -v grep
 				;;
+		(safe)
+				command firefox \
+								--profile $profile_prefix_path/$2 \
+								--new-instance \
+								--safe-mode &
+				;;
 		(help)
 				cat << EOF
   path -- print profile path
   create <profile name> -- create a profile if it does not exist
+  safe <profile name> -- start firefox in safe mode
   start <profile name> -- start firefox with a specific profile
   clone <current-profile> <new-profile> -- copy an existing profile to a new profile
   delete <profile name> -- delete an existing profile
