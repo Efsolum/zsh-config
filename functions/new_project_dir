@@ -1,11 +1,14 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 # Create a new project directory with the specified layout
-# Aruguments: $1, quoted string
+# Aruguments:
+# $1, template name to use
+# $2, project name as quoted string
 
-local PROJECT_STRING="$1 $(date +%s)"
+local TEMPLATE=$1
+local PROJECT_STRING="$2 $(date +%s)"
 local PROJECT_NAME=${(L)${${PROJECT_STRING// /-}//_/-}}
 local PROJECT_ROOT="$HOME/Projects/$PROJECT_NAME/"
 
 print 'New project root:' $PROJECT_ROOT
 
-source $ZDOTDIR/templates/default.zsh
+source $ZDOTDIR/templates/${TEMPLATE}.zsh
