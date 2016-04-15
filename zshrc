@@ -55,4 +55,4 @@ fi
 
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path
-typeset -U PATH
+typeset -U PATH MANPATH INFOPATH

@@ -1,9 +1,6 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 # Additional user tools go here.
 
-# set PATH so it includes user's private bin if it exists
-[[ -d "$HOME/bin" ]] && path=($HOME/bin $path)
-
 export EDITOR="emacsclient -s projects -t"
 export VISUAL="emacsclient -s projects -c"
 

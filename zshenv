@@ -31,6 +31,16 @@ export STOW_DIR=$HOME/dotfiles
 # XDG Settings
 # export XDG_CONFIG_HOME=
 
+[[ -d "$HOME/bin" ]] && path=($HOME/bin $path)
+
+# $ mkdir -p tools/{bin,include,etc,lib,man,sbin,share,src,stow} tools/share/{man,info}
+if [[ -d $HOME/tools ]]; then
+		path=($HOME/tools/bin $HOME/tools/sbin $path)
+		export PATH
+		export MANPATH="$HOME/tools/man:$MANPATH"
+		export INFOPATH="$HOME/tools/info:$INFOPATH"
+fi
+
 # zonfig log directory
 export ZCONFIG_LOG_DIR=$ZDOTDIR/logs
 export ZCONFIG_LOG=$ZCONFIG_LOG_DIR/zconfig-$(date +%G%m%d).log
