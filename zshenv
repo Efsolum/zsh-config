@@ -33,7 +33,8 @@ export ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE
 
 [[ -d "$HOME/bin" ]] && path=($HOME/bin $path)
 
-# $ mkdir -p tools/{bin,include,etc,lib,man,sbin,share,src,stow} tools/share/{man,info}
+# mkdir -p tools/{bin,include,etc,lib,sbin,share,src,stow} tools/share/{man,info}
+# ln -rs tools/share/man tools/man
 if [[ -d $HOME/tools ]]; then
 		path=($HOME/tools/bin $HOME/tools/sbin $path)
 		export PATH
