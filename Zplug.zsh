@@ -27,7 +27,7 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "hlissner/zsh-autopair"
 
 # apt-get install libnotify-bin xdotool
-zplug "marzocchi/zsh-notify"
+zplug "marzocchi/zsh-notify", if:"[[ -n $DISPLAY ]]"
 
 # Vagrant completions
 zplug "plugins/vagrant", from:oh-my-zsh
