@@ -33,6 +33,8 @@ unsetopt PUSHD_MINUS
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 export HISTFILE=$ZDOTDIR/history
+export DIR_STACK_SIZE=40
+export DIR_STACK_FILE=$ZDOTDIR/stackhist
 
 # Stash variables
 [[ -z $TMUX ]] && \
@@ -52,6 +54,16 @@ if [[ -z $TMUX ]] && [[ -z $sessionup ]]; then
 fi
 
 # prompt fire yellow red yellow
+
+# restore the directory stack
+dirstack restore
+
+autoload -U add-zsh-hook
+function on_exit_shell() {
+		# save/persist the directory stack
+		dirstack save
+}
+add-zsh-hook zshexit on_exit_shell
 
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path

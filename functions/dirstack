@@ -1,0 +1,51 @@
+# Saves and restore the directory stack (pushd, popd, dirs)
+# Arguments: $1, command
+
+ZDOTDIR=${ZDOTDIR:-$HOME}
+DIR_STACK_SIZE=${DIR_STACK_SIZE:-40}
+DIR_STACK_FILE=${DIR_STACK_FILE:-$ZDOTDIR/stackhist}
+
+local currentstack
+local savedstack
+local fullstack
+
+[[ -f $DIR_STACK_FILE ]] || touch $DIR_STACK_FILE
+
+currentstack=(${(s: :)$(dirs -l)})
+savedstack=(${(s: :)$(cat $DIR_STACK_FILE)})
+
+fullstack=($currentstack $savedstack)
+fullstack=(${(u)fullstack})
+
+case $1 in
+		(save)
+				print -l $fullstack[1,$DIR_STACK_SIZE] > $DIR_STACK_FILE
+				;;
+		(restore)
+				local current_dir_index=$fullstack[(i)$(pwd)]
+				local newstack
+				if [[ -n $current_dir_index ]]; then
+						newstack=($fullstack[1,$(($current_dir_index - 1))]
+											$fullstack[$(($current_dir_index + 1)),-1])
+				else
+						newstack=($fullstack)
+				fi
+
+				dirs $newstack
+				;;
+		(show)
+				print -l ${savedstack/$HOME/'~'}
+				;;
+		(clear)
+				echo '' > $DIR_STACK_FILE
+				;;
+		(help|*)
+				cat << EOF
+  save -- save directory stack to file
+  restore -- load directory stack from file
+  show -- show the contents of the directory stack file
+  clear -- empty the directory stack file
+  help -- print this help
+EOF
+				;;
+esac
