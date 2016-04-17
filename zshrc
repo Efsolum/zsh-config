@@ -68,4 +68,4 @@ add-zsh-hook zshexit on_exit_shell
 
 # This stays ad the bottom fo the file,
 # and ensures there are no duplicates in $PATH/$path ...etc
-typeset -U PATH MANPATH INFOPATH
+typeset -U fpath path manpath infopath

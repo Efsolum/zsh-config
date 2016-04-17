@@ -36,10 +36,9 @@ export ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE
 # mkdir -p tools/{bin,include,etc,lib,sbin,share,src,stow} tools/share/{man,info}
 # ln -rs tools/share/man tools/man
 if [[ -d $HOME/tools ]]; then
-		path=($HOME/tools/bin $HOME/tools/sbin $path)
-		export PATH
-		export MANPATH="$HOME/tools/man:$MANPATH"
-		export INFOPATH="$HOME/tools/info:$INFOPATH"
+		path=($HOME/tools/bin $HOME/tools/sbin $path); export PATH
+		manpath=($HOME/tools/man $manpath); export MANPATH
+		infopath=($HOME/tools/info $infopath); export INFOPATH
 fi
 
 # zonfig log directory

@@ -19,7 +19,7 @@ export GIT_CONFIG=$XDG_CONFIG_HOME/gitconfig
 export UNISON=$XDG_CONFIG_HOME/unison
 
 #set up pyenv evironment
-export PATH="$PYENV_ROOT/bin:$PATH"
+path=($PYENV_ROOT/bin $path); export PATH
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 [[ -d $PYENV_ROOT ]] || \
 		{curl -L \
