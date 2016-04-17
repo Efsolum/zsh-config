@@ -28,6 +28,7 @@ setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 setopt PUSHD_TO_HOME
 setopt SHARE_HISTORY
+unsetopt AUTO_CD
 unsetopt PUSHD_MINUS
 
 export HISTSIZE=100000
