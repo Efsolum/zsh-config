@@ -32,13 +32,6 @@ zplug "marzocchi/zsh-notify", if:"[[ -n $DISPLAY ]]"
 # Vagrant completions
 zplug "plugins/vagrant", from:oh-my-zsh
 
-#  Simplistic interactive filtering tool
-zplug "peco/peco", as:command, from:gh-r
-
-# fzf is a general-purpose command-line fuzzy finder.
-zplug "junegunn/fzf-bin", \
-			as:command, of:"*linux*amd64*", from:gh-r, file:fzf
-
 # Directory listings for zsh with git features
 zplug "supercrabtree/k"
 
@@ -47,18 +40,6 @@ zplug "zsh-users/zsh-syntax-highlighting"
 
 # lightweight and flexible command-line JSON processor
 zplug "stedolan/jq", as:command, from:gh-r, file:jq
-
-# Local Scripts
-# zplug "$ZDOTDIR/scripts", from:local, as:command
-
-# Local Applications
-# zplug "$DESKTOP_APPS/firefox-47.0a2.en-US.linux-x86_64", \
-# 			from:local, as:command, of:firefox, file:firefox-dev, \
-# 			if:"[[ -d \"$DESKTOP_APPS/firefox-47.0a2.en-US.linux-x86_64\" ]]"
-
-# zplug "$DESKTOP_APPS/skype-4.3.0.37", \
-# 			from:local, as:command, of:skype, file:skype, \
-# 			if:"[[ -d \"$DESKTOP_APPS/skype-4.3.0.37\" ]]"
 
 # Install missing plugins
 if ! zplug check; then
