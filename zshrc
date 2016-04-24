@@ -1,39 +1,24 @@
-# -*- mode: sh; sh-shell: zsh;-*-
-[[ -f $ZDOTDIR/Zplug.zsh ]] && \
-		source $ZDOTDIR/Zplug.zsh
 
-autoload -U zmv
-autoload -U compinit; compinit
-autoload -U promptinit; promptinit
+ZSH_PYENV_INIT=$HOME/tools/share/zsh-user-customizations/zsh-pyenv/init.zsh
+[[ -f $ZSH_PYENV_INIT ]] && \
+		source $ZSH_PYENV_INIT
+unset ZSH_PYENV_INIT
 
-# Keybindings
-bindkey -e # default to emacs keybindings
-bindkey "^Hm" run-help # C-h m
-bindkey "^W" kill-region # C-w
+ZPLUG_INIT=$HOME/tools/share/zsh-user-customizations/zplug/init.zsh
+[[ -f $ZPLUG_INIT ]] && \
+		source $ZPLUG_INIT
+unset ZPLUG_INIT
 
-setopt AUTO_PUSHD
-setopt COMPLETE_IN_WORD
-setopt EXTENDED_GLOB
-setopt EXTENDED_HISTORY
-setopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
-setopt INC_APPEND_HISTORY
-setopt INTERACTIVE_COMMENTS
-setopt PROMPT_SUBST
-setopt PUSHD_IGNORE_DUPS
-setopt PUSHD_SILENT
-setopt PUSHD_TO_HOME
-setopt SHARE_HISTORY
-unsetopt AUTO_CD
-unsetopt PUSHD_MINUS
+ZSH_TMUX_INIT=$HOME/tools/share/zsh-user-customizations/zsh-tmux/init.zsh
+[[ -f $ZSH_TMUX_INIT ]] && \
+		source $ZSH_TMUX_INIT
+unset ZSH_TMUX_INIT
 
-export HISTSIZE=100000
-export SAVEHIST=$HISTSIZE
-export HISTFILE=$ZDOTDIR/history
+ZSH_SETTINGS_INIT=$HOME/tools/share/zsh-user-customizations/zsh-settings/init.zsh
+[[ -f $ZSH_SETTINGS_INIT ]] && \
+		source $ZSH_SETTINGS_INIT
+unset ZSH_SETTINGS_INIT
+
 export DIR_STACK_SIZE=40
 export DIR_STACK_FILE=$ZDOTDIR/stackhist
 
@@ -47,12 +32,6 @@ export DIR_STACK_FILE=$ZDOTDIR/stackhist
 		source $ZDOTDIR/functions/index
 [[ -f $ZDOTDIR/settings/index.zsh ]] && \
 		source $ZDOTDIR/settings/index.zsh
-
-# Start tmux session using default layout
-sessionup=$(tmux list-sessions | grep General:)
-if [[ -z $TMUX ]] && [[ -z $sessionup ]]; then
-		tmux_default_layout
-fi
 
 # prompt fire yellow red yellow
 

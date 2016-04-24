@@ -1,9 +1,6 @@
 # -*- mode: sh; sh-shell: zsh;-*-
 # Additional user tools go here.
 
-export EDITOR="emacsclient -s projects -t"
-export VISUAL="emacsclient -s projects -c"
-
 # gnupg & gnupg2 config & data directory
 export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 
@@ -17,23 +14,6 @@ export GIT_CONFIG=$XDG_CONFIG_HOME/gitconfig
 
 # Unison File Synchronizer config directory
 export UNISON=$XDG_CONFIG_HOME/unison
-
-#set up pyenv evironment
-path=($PYENV_ROOT/bin $path); export PATH
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-[[ -d $PYENV_ROOT ]] || \
-		{curl -L \
-					https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer |\
-						bash}
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-#set up rvm environment
-# RVMSCRIPT="/usr/local/rvm/scripts/rvm"
-# if [ -s $RVMSCRIPT ] ; then
-#    source $RVMSCRIPT
-# fi
-
 export VAGRANT_HOME=$XDG_DATA_HOME/vagrant
 
 # Check for external dependencies

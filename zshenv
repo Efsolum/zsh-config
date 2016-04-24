@@ -1,5 +1,3 @@
-# -*- mode: sh; sh-shell: zsh;-*-
-
 # Add these two lines to $HOME/.zshenv
 # export ZDOTDIR=$HOME/.zconfig
 # source $ZDOTDIR/.zshenv
@@ -12,13 +10,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # export XDG_DATA_DIRS=
 export XDG_CACHE_HOME="$HOME/.cache"
 # export XDG_RUNTIME_DIR=
-
-# Setup terminal for colors
-if [[ -n $TMUX ]] ; then
-		export TERM=screen-256color
-else
-		export TERM=xterm-256color
-fi
 
 # Declare a user-wide stashes
 export GLOBAL_ENVSTORE_FILE=$ZDOTDIR/userstash
@@ -33,30 +24,13 @@ export ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE
 
 [[ -d "$HOME/bin" ]] && path=($HOME/bin $path)
 
-# mkdir -p tools/{bin,include,etc,lib,sbin,share,src,stow} tools/share/{man,info}
-# ln -rs tools/share/man tools/man
-# ln -rs tools/share/info tools/info
-if [[ -d $HOME/tools ]]; then
-		path=($HOME/tools/bin $HOME/tools/sbin $path); export PATH
-		manpath=($HOME/tools/man $manpath :); export MANPATH
-		infopath=($HOME/tools/info $infopath :); export INFOPATH
-fi
-
 # zonfig log directory
 export ZCONFIG_LOG_DIR=$ZDOTDIR/logs
 export ZCONFIG_LOG=$ZCONFIG_LOG_DIR/zconfig-$(date +%G%m%d).log
 [[ -d $ZCONFIG_LOG_DIR ]] || \
 		mkdir $ZCONFIG_LOG_DIR
 
-# zplug directory, for storing zsh dpendencies
-export ZPLUG_HOME=$ZDOTDIR/zplug
-
-# Application directories
-export DESKTOP_APPS=$ZDOTDIR/desktop_apps
-export CLI_APPS=$ZDOTDIR/cli_apps
-
-[[ -d $DESKTOP_APPS ]] || mkdir -p $DESKTOP_APPS
-[[ -d $CLI_APPS ]] || mkdir -p $CLI_APPS
-
-# Python Pyenv
-export PYENV_ROOT=$CLI_APPS/pyenv
+ZSH_SETTINGS_INIT=$HOME/tools/share/zsh-user-customizations/zsh-settings/initenv.zsh
+[[ -f $ZSH_SETTINGS_INIT ]] && \
+		source $ZSH_SETTINGS_INIT
+unset ZSH_SETTINGS_INIT
