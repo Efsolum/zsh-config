@@ -25,7 +25,7 @@ export DIR_STACK_SIZE=40
 export DIR_STACK_FILE=$ZDOTDIR/stackhist
 
 # Stash variables
-[[ -z $TMUX ]] && \
+[[ -z $TMUX && -x $(type envstore) ]] && \
 		{ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore clear
 		 ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save ZDOTDIR
 		 ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save PATH}
