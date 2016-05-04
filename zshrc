@@ -1,4 +1,11 @@
 
+RPROMPT_BKG_COLOR=yellow
+RPROMPT_FOR_COLOR=black
+if [[ -n $GUIX_ENVIRONMENT && $GUIX_ENVIRONMENT == 't' ]]; then
+		RPROMPT="%F{$RPROMPT_BKG_COLOR}$(print '\uE0B2')%f%K{$RPROMPT_BKG_COLOR}\
+%F{$RPROMPT_FOR_COLOR} $(print '\u2622') Guix Env %f%k"
+fi
+
 ZPLUG_INIT=$HOME/tools/share/zsh-user-customizations/zplug/init.zsh
 [[ -f $ZPLUG_INIT ]] && \
 		source $ZPLUG_INIT
