@@ -1,18 +1,13 @@
 
-ZSH_PYENV_INIT=$HOME/tools/share/zsh-user-customizations/zsh-pyenv/init.zsh
-[[ -f $ZSH_PYENV_INIT ]] && \
-		source $ZSH_PYENV_INIT
-unset ZSH_PYENV_INIT
-
 ZPLUG_INIT=$HOME/tools/share/zsh-user-customizations/zplug/init.zsh
 [[ -f $ZPLUG_INIT ]] && \
 		source $ZPLUG_INIT
 unset ZPLUG_INIT
 
-ZSH_TMUX_INIT=$HOME/tools/share/zsh-user-customizations/zsh-tmux/init.zsh
-[[ -f $ZSH_TMUX_INIT ]] && \
-		source $ZSH_TMUX_INIT
-unset ZSH_TMUX_INIT
+# ZSH_TMUX_INIT=$HOME/tools/share/zsh-user-customizations/zsh-tmux/init.zsh
+# [[ -f $ZSH_TMUX_INIT ]] && \
+# 		source $ZSH_TMUX_INIT
+# unset ZSH_TMUX_INIT
 
 ZSH_SETTINGS_INIT=$HOME/tools/share/zsh-user-customizations/zsh-settings/init.zsh
 [[ -f $ZSH_SETTINGS_INIT ]] && \
