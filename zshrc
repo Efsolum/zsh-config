@@ -7,6 +7,7 @@ if [[ -n $GUIX_ENVIRONMENT && $GUIX_ENVIRONMENT == 't' ]]; then
 fi
 
 ZPLUG_INIT=$HOME/tools/share/zsh-user-customizations/zplug/init.zsh
+export USER_THEMES_ENABLED=true
 [[ -f $ZPLUG_INIT ]] && \
 		source $ZPLUG_INIT
 unset ZPLUG_INIT
