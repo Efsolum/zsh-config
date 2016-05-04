@@ -3,11 +3,11 @@
 # source $ZDOTDIR/.zshenv
 
 # load /etc/profile
-# if [[ -f /etc/profile ]]; then
-# 		emulate sh
-# 		source /etc/profile
-# 		emulate zsh
-# fi
+if [[ -f /etc/profile && ! -x $(type pwd) ]]; then
+    emulate sh
+    source /etc/profile
+    emulate zsh
+fi
 
 # XDG related variables
 # https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
