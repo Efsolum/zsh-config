@@ -1,9 +1,24 @@
+RPROMPT=''
+GUIX_SEC_BKG_COLOR=yellow
+GUIX_SEC_FOR_COLOR=232
+SUBSHELL_SEC_BKG_COLOR=blue
+SUBSHELL_SEC_FOR_COLOR=232
 
-RPROMPT_BKG_COLOR=yellow
-RPROMPT_FOR_COLOR=black
 if [[ -n $GUIX_ENVIRONMENT && $GUIX_ENVIRONMENT == 't' ]]; then
-		RPROMPT="%F{$RPROMPT_BKG_COLOR}$(print '\uE0B2')%f%K{$RPROMPT_BKG_COLOR}\
-%F{$RPROMPT_FOR_COLOR} $(print '\u2622') Guix Env %f%k"
+		RPROMPT+="%F{$GUIX_SEC_BKG_COLOR}$(print '\uE0B2')%f%K{$GUIX_SEC_BKG_COLOR}\
+%F{$GUIX_SEC_FOR_COLOR} $(print '\u2622') Guix Env %f%k"
+		RPROMPT+="%K{$GUIX_SEC_BKG_COLOR}%F{$SUBSHELL_SEC_BKG_COLOR}$(print '\uE0B2')%f%k"
+else
+		RPROMPT+="%K{default}%F{$SUBSHELL_SEC_BKG_COLOR}$(print '\uE0B2')%f%k"
+fi
+
+if [[ $SHLVL == 1 ]]; then
+		RPROMPT+="%K{$SUBSHELL_SEC_BKG_COLOR}%F{$SUBSHELL_SEC_FOR_COLOR} Login %f%k"
+elif [[ $SHLVL == 2 && -n $TMUX ]]; then
+		RPROMPT+="%K{$SUBSHELL_SEC_BKG_COLOR}%F{$SUBSHELL_SEC_FOR_COLOR} Tmux %f%k"
+else
+		RPROMPT+="%K{$SUBSHELL_SEC_BKG_COLOR}%F{$SUBSHELL_SEC_FOR_COLOR} \
+SHLVL: $SHLVL %f%k"
 fi
 
 ZPLUG_INIT=$HOME/tools/share/zsh-user-customizations/zplug/init.zsh
@@ -14,7 +29,7 @@ unset ZPLUG_INIT
 
 # ZSH_TMUX_INIT=$HOME/tools/share/zsh-user-customizations/zsh-tmux/init.zsh
 # [[ -f $ZSH_TMUX_INIT ]] && \
-# 		source $ZSH_TMUX_INIT
+#		source $ZSH_TMUX_INIT
 # unset ZSH_TMUX_INIT
 
 ZSH_SETTINGS_INIT=$HOME/tools/share/zsh-user-customizations/zsh-settings/init.zsh
