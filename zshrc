@@ -22,7 +22,13 @@ fi
 
 if [[ $SHLVL == 1 ]]; then
 		RPROMPT+="%K{$SUBSHELL_SEC_BKG_COLOR}%F{$SUBSHELL_SEC_FOR_COLOR} \
-$SUBSHELL_SEC_ICON_2 Login %f%k"
+$SUBSHELL_SEC_ICON_2"
+		if [[ -o LOGIN ]]; then
+				RPROMPT+=" Login "
+		else
+				RPROMPT+=" Non-login "
+		fi
+		RPROMPT+="%f%k"
 elif [[ $SHLVL == 2 && -n $TMUX ]]; then
 		RPROMPT+="%K{$SUBSHELL_SEC_BKG_COLOR}%F{$SUBSHELL_SEC_FOR_COLOR} \
 $SUBSHELL_SEC_ICON_3 Tmux %f%k"
