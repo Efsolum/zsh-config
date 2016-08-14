@@ -30,6 +30,7 @@ export ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE
 # export XDG_CONFIG_HOME=
 
 [[ -d "$HOME/bin" ]] && path=($HOME/bin $path)
+[[ -d "$HOME/.emacs.d/bin" ]] && path=($HOME/.emacs.d/bin $path)
 
 # zonfig log directory
 export ZCONFIG_LOG_DIR=$ZDOTDIR/logs
