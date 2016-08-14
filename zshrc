@@ -43,10 +43,10 @@ export USER_THEMES_ENABLED=true
 		source $ZPLUG_INIT
 unset ZPLUG_INIT
 
-# ZSH_TMUX_INIT=$HOME/tools/share/zsh-user-customizations/zsh-tmux/init.zsh
-# [[ -f $ZSH_TMUX_INIT ]] && \
-#		source $ZSH_TMUX_INIT
-# unset ZSH_TMUX_INIT
+ZSH_TMUX_INIT=$HOME/tools/share/zsh-user-customizations/zsh-tmux/init.zsh
+[[ -f $ZSH_TMUX_INIT ]] && \
+	source $ZSH_TMUX_INIT
+unset ZSH_TMUX_INIT
 
 ZSH_SETTINGS_INIT=$HOME/tools/share/zsh-user-customizations/zsh-settings/init.zsh
 [[ -f $ZSH_SETTINGS_INIT ]] && \
