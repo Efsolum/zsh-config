@@ -7,3 +7,5 @@
 /cli_apps/
 /essentialstash
 /.zcompdump-technidragon-5.0.7
+/.zcompdump-devserver-5.1.1
+/stackhist
