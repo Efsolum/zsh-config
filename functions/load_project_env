@@ -1,0 +1,30 @@
+# -*- mode: sh; sh-shell: zsh;-*-
+
+# Purpose
+# Load custom project zsh config in a new shell instance/environment
+# Arguments: 'Project Directory Name'
+
+local TARGET_PROJECT=$1
+
+[[ -d $ZDOTDIR ]] && \
+		ENVSTORE_FILE=$GLOBAL_ENVSTORE_FILE envstore save ZDOTDIR
+
+local PROJECT_LOAD_PATH=$HOME/Projects/$TARGET_PROJECT/zproject
+
+ENVSTORE_FILE=$ESSENTIAL_ENVSTORE_FILE envstore clear
+
+local varlist
+varlist=(LANG LANGUAGE HOME USER SHELL PATH DISPLAY SSH_AGENT_PID SSH_AUTH_SOCK
+				 GLOBAL_ENVSTORE_FILE)
+
+for var in $varlist; do
+		[[ -n ${(P)var} ]] && ENVSTORE_FILE=$ESSENTIAL_ENVSTORE_FILE envstore save $var
+done
+
+if [[ -d $PROJECT_LOAD_PATH ]]; then
+		env \
+				--ignore-environment \
+				ZDOTDIR=$PROJECT_LOAD_PATH \
+				ENVSTORE_FILE=$ESSENTIAL_ENVSTORE_FILE \
+				zsh -fc 'eval $(envstore eval); zsh -li'
+fi
